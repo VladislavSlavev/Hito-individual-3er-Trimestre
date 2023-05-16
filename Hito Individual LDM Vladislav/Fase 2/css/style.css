@@ -1,50 +1,45 @@
-/* || general styles */
-
 html {
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
   }
   
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+  
+h1, h2 {
+  font-family: 'Faster One', cursive;
+}
+
+@media (min-width: 300px ) and (max-width: 782px ) {
+  #cont-1 table {
+    width: 50%;
+  }
+}
+
+@media (min-width: 300px ) and (max-width: 782px ) {
   body {
-    width: 100%;
-    margin: 0 auto;
+    font-size: 70%;
   }
-  
-  h1, h2 {
-    font-family: 'Faster One', cursive;
+}
+@media (max-width: 490px ) {
+  body {
+    font-size: 65%;
   }
-  
-  h1{color: crimson;}
-  
-  /* header styles */
-  
-  h1 {
-    font-size: 4rem;
-    text-align: center;
+}
+@media (max-width: 430px ) {
+  body {
+    font-size: 0.6rem;
   }
-  
-  header p {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
+}
+@media (max-width: 420px ) {
+  body {
+    font-size: 0.5rem;
   }
-  
-  /* section styles */
-  
-  section article {
-    width: 33%;
-    float: left;
+}
+@media (max-width: 367px ) {
+  body {
+    font-size: 0.45rem;
   }
-  
-  section p {
-    margin: 5px 0;
-  }
-  
-  section ul {
-    margin-top: 0;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    letter-spacing: -5px;
-    margin-bottom: 10px;
-  }
+}

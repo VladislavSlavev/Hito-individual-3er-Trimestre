@@ -1,5 +1,5 @@
-const repositorio_thead = document.querySelector(".repositorio-thead");
-const repositorio_tbody = document.querySelector(".repositorio-tbody");
+const repositorio_thead = document.querySelector(".contenido-thead");
+const repositorio_tbody = document.querySelector(".contenido-tbody");
 
     fetch("https://www.el-tiempo.net/api/json/v1/provincias")
     .then(function(response) {
@@ -7,10 +7,10 @@ const repositorio_tbody = document.querySelector(".repositorio-tbody");
     })
     
     .then(function(respuestas) {
-        let out_thead = "";
-        let out_tbody = "";
+        let mostrar_thead = "";
+        let mostrar_tbody = "";
 
-        out_thead += `
+        mostrar_thead += `
         <tr>
         <th scope="col">Código Provincia</th>
         <th scope="col">Nombre</th>
@@ -21,7 +21,7 @@ const repositorio_tbody = document.querySelector(".repositorio-tbody");
         `;
             for (let respuesta of respuestas) {
 
-                out_tbody += `
+                mostrar_tbody += `
                     <tr>
                     <td>${respuesta.CODPROV}</td>
                     <td>${respuesta.NOMBRE_PROVINCIA}</td>
@@ -31,8 +31,8 @@ const repositorio_tbody = document.querySelector(".repositorio-tbody");
                     </tr>
                 `;
             }
-            repositorio_thead.innerHTML = out_thead;
-            repositorio_tbody.innerHTML = out_tbody;
+            repositorio_thead.innerHTML = mostrar_thead;
+            repositorio_tbody.innerHTML = mostrar_tbody;
         })
 
 
